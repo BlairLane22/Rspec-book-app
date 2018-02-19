@@ -52,6 +52,7 @@ module ExpenseTracker
 
       parsed = JSON.parse(last_response.body)
       expect(parsed).to include('expense_id' => a_kind_of(Integer))
+
     end
   end
 end
