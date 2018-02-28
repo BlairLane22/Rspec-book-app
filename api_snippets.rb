@@ -10,7 +10,7 @@ app = API.new(ledger: Ledger.new)
 
 
 
-# Rseudocode for what happens inside the API class:
+# Pseudocode for what happens inside the API class:
 #
 result = @ledger.record({ 'some' => 'data' })
 result.success?       # => a Boolean
