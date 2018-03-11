@@ -27,8 +27,8 @@ module ExpenseTracker
     get '/expenses/:date' do
 
       # expense = JSON.parse(request.body.read)
-      # result = @ledger.record(expense)
-      #
+      # result = @ledger.record(date)
+
       # if result.success?
       #   status 200
       #   JSON.generate('expense_id' => result.expense_id)
