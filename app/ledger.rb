@@ -3,6 +3,11 @@ module ExpenseTracker
 
   class Ledger
     def record(expense)
+      unless expense.key?('payee')
+        message = "Invalid expense: payee is required"
+        return ResultRecord.new(false, nil, message)
+      end
+
       DB[:expenses].insert(expense)
       id = DB[:expenses].max(:id)
       ResultRecord.new(true, id, nil)
